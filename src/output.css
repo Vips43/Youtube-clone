@@ -254,9 +254,6 @@
   .bg-black {
     background-color: var(--color-black);
   }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
-  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -331,6 +328,9 @@
   position: relative;
   button {
     position: absolute;
+    top: -5px;
+    background-color: yellow;
+    z-index: 2;
   }
   div {
     width: 100%;
@@ -338,6 +338,9 @@
     gap: 10px;
     cursor: grabbing;
   }
+}
+#category-slider button:hover {
+  background-color: rgb(70, 70, 70);
 }
 #category-slider > div > p {
   background-color: #252525;
@@ -351,6 +354,12 @@
 }
 #category-slider::-webkit-scrollbar {
   display: none;
+}
+#leftBtn {
+  left: -10px;
+}
+#ritBtn {
+  right: -10px;
 }
 @property --tw-border-style {
   syntax: "*";

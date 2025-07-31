@@ -21,15 +21,25 @@
   box-sizing: border-box;
   border: 20px solid black;
   position: relative;
-  button{
-    position: absolute;
-  }
+
+  
+
   div{
     width:100%;
     display: flex;
     gap: 10px;
     cursor: grabbing;
   }
+}
+button{
+  position: absolute;
+  top: 60px;
+  background-color: yellow;
+  padding: 1px 3px;
+  z-index: 20;
+}
+button:hover{
+  background-color: rgb(70, 70, 70);
 }
 #category-slider > div > p{
   background-color: #252525;
@@ -43,4 +53,11 @@
 }
 #category-slider::-webkit-scrollbar{
   display: none;
+}
+#leftBtn{
+  left: 10px;
+}
+#ritBtn{
+  right: 10px;
+
 }
