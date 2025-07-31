@@ -17,14 +17,18 @@
 #category-slider{
   background-color: black;
   overflow-x: auto;
+  height: fit-content;
+  box-sizing: border-box;
+  border: 20px solid black;
   position: relative;
-  height: 80px;
-  div{
-    border: 10px solid black;
+  button{
     position: absolute;
+  }
+  div{
     width:100%;
     display: flex;
     gap: 10px;
+    cursor: grabbing;
   }
 }
 #category-slider > div > p{
@@ -33,7 +37,9 @@
   padding: 2px 10px;
   border-radius: 5px;
   color: white;
+  font-size: smaller;
   font-weight: 600;
+  cursor: pointer;
 }
 #category-slider::-webkit-scrollbar{
   display: none;

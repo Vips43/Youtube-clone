@@ -165,9 +165,6 @@
   }
 }
 @layer utilities {
-  .mt-1 {
-    margin-top: calc(var(--spacing) * 1);
-  }
   .mt-1\.5 {
     margin-top: calc(var(--spacing) * 1.5);
   }
@@ -177,11 +174,11 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .h-9 {
     height: calc(var(--spacing) * 9);
+  }
+  .h-\[30px\] {
+    height: 30px;
   }
   .h-\[40px\] {
     height: 40px;
@@ -189,14 +186,17 @@
   .h-\[50px\] {
     height: 50px;
   }
-  .h-full {
-    height: 100%;
-  }
   .w-\[3rem\] {
     width: 3rem;
   }
   .w-\[40px\] {
     width: 40px;
+  }
+  .w-\[80\%\] {
+    width: 80%;
+  }
+  .w-\[90\%\] {
+    width: 90%;
   }
   .w-\[100\%\] {
     width: 100%;
@@ -204,23 +204,14 @@
   .w-\[120px\] {
     width: 120px;
   }
-  .w-\[150px\] {
-    width: 150px;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
+  .cursor-pointer {
+    cursor: pointer;
   }
   .items-center {
     align-items: center;
   }
   .justify-between {
     justify-content: space-between;
-  }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
   }
   .gap-1\.5 {
     gap: calc(var(--spacing) * 1.5);
@@ -240,6 +231,12 @@
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
+  .rounded-tl-full {
+    border-top-left-radius: calc(infinity * 1px);
+  }
+  .rounded-bl-full {
+    border-bottom-left-radius: calc(infinity * 1px);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -256,6 +253,9 @@
   }
   .bg-black {
     background-color: var(--color-black);
+  }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
@@ -292,21 +292,24 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .placeholder-white {
+  .placeholder-\[\#252525\] {
     &::placeholder {
-      color: var(--color-white);
+      color: #252525;
     }
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .outline-0 {
     outline-style: var(--tw-outline-style);
     outline-width: 0px;
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
+  .md\:w-\[100\%\] {
+    @media (width >= 48rem) {
+      width: 100%;
+    }
   }
 }
 .material-symbols-outlined {
@@ -320,17 +323,34 @@
   }
 }
 #category-slider {
-  padding: 10px 20px;
   background-color: black;
   overflow-x: auto;
-  p {
-    background-color: #252525;
-    white-space: nowrap;
-    padding: 2px 10px;
-    border-radius: 5px;
-    color: white;
-    font-weight: 600;
+  height: fit-content;
+  box-sizing: border-box;
+  border: 20px solid black;
+  position: relative;
+  button {
+    position: absolute;
   }
+  div {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    cursor: grabbing;
+  }
+}
+#category-slider > div > p {
+  background-color: #252525;
+  white-space: nowrap;
+  padding: 2px 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: smaller;
+  font-weight: 600;
+  cursor: pointer;
+}
+#category-slider::-webkit-scrollbar {
+  display: none;
 }
 @property --tw-border-style {
   syntax: "*";

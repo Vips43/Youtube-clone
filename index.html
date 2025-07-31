@@ -12,57 +12,58 @@
     <title>Youtube</title>
   </head>
   <body>
-    <nav class="flex gap-2 items-center justify-between bg-black p-3 h-[50px] border">
+    <nav class="flex gap-2 items-center bg-black justify-between p-3 h-[50px] border">
       <!-- left starts -->
-       <div class="flex items-center gap-5">
-         <div class="w-[40px] h-[40px] p-2 rounded-full text-white text-center">
+       <div class="flex items-center w-[80%] gap-5">
+         <div class="w-[40px] h-[40px] cursor-pointer p-2 rounded-full text-white text-center">
            &#9776;
          </div>
-         <div class="w-[120px] flex">
+         <div class="w-[120px] cursor-pointer flex">
            <img class="" src="images/Youtube-Logo-PNG.png" alt="" />
            <sup class="text-gray-400 mt-1.5"> IN </sup>
          </div>
        </div>
       <!-- left ends -->
       <!-- right starts -->
-      <div class="flex items-center gap-2">
+      <div class="flex items-center h-[40px] w-[90%] gap-2">
         <!-- input starts -->
         <div
-          class="flex items-center w-[150px] ml-[1rem] rounded-3xl h-9 border border-gray-400 overflow-hidden">
+          class="flex items-center cursor-pointer md:w-[100%] ml-[1rem] rounded-3xl h-9 border border-gray-400 bg-[#252525] overflow-hidden">
           <input
-            class="h-full pl-3 text outline-0 w-[100%] placeholder-white"
+            class="h-[30px] rounded-bl-full cursor-pointer rounded-tl-full pl-3 text outline-0 w-[100%] bg-black placeholder-[#252525]"
             type="text"
             placeholder="Search"/>
-          <span class="material-symbols-outlined border-l-1 w-[3rem] text-white text-center">
-            search
-          </span>
+          <span class="material-symbols-outlined cursor-pointer border-l-1 w-[3rem] text-white text-center">search</span>
         </div>
         
         <!-- input closed -->
         <div id="div" class="rounded-full ">
-          <span class="material-symbols-outlined"> mic </span>
+          <span class="material-symbols-outlined cursor-pointer"> mic </span>
         </div>
   
-        <div  class="create flex items-center gap-1.5 rounded-3xl py-[5px] px-[10px] bg-[#252525]">
+        <div  class="create flex md:hidden cursor-pointer items-center gap-1.5 rounded-3xl py-[5px] px-[10px] bg-[#252525]">
           <span class="material-symbols-outlined text-white">add_2</span>
           <span class="font-bold text-white">Create</span>
         </div>
   
-        <span class="material-symbols-outlined text-white p-[5px]">notifications</span>
+        <span class="material-symbols-outlined cursor-pointer text-white p-[5px]">notifications</span>
   
         <!-- profile starts -->
          <div class="reounded">
-          <span class="material-symbols-outlined bg-[#252525] text-3xl rounded-full text-white p-[5px] ">account_circle</span>
+          <span class="material-symbols-outlined cursor-pointer bg-[#252525] text-3xl rounded-full text-white p-[5px] ">account_circle</span>
          </div>
         <!-- profile ended -->
       </div>  
       <!-- right ends -->
     </nav>
     <section id="category-slider" class="flex gap-2 scrollbar-hide">
-      <button></button>
+      <button class="bg-black rounded-full p-1 opacity-0.1"><span class="material-symbols-outlined text-white">
+chevron_left
+</span></button>
       <div>
         <p>All</p><p>Music</p><p>Web Development</p><p>Live</p><p>Mixes</p><p>Mantras</p><p>Java</p><p>AI</p><p>Gulshan Kumar</p><p>Album</p><p>Live Television</p><p>Folk Music</p><p>Sales</p><p>Information</p><p>Filmi</p><p>Comedy</p><p>Recently Uploaded</p><p>Watched</p><p>New to you</p>
       </div>
     </section>
+
   </body>
 </html>
