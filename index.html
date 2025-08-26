@@ -1,111 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/output.css" />
-    <link rel="stylesheet" href="src/input.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
-    />
 
-    <title>Youtube</title>
-  </head>
-  <body>
-    <nav
-      class="flex gap-2 items-center bg-black justify-between p-3 h-[50px] border"
-    >
-      <!-- left starts -->
-      <div class="flex items-center w-[80%] gap-5">
-        <div
-          class="w-[40px] h-[40px] cursor-pointer p-2 rounded-full text-white text-center"
-        >
-          &#9776;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/output.css" />
+  <link rel="stylesheet" href="src/input.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <title>Youtube</title>
+</head>
+
+<body>
+  <nav class="flex gap-2 items-center bg-black justify-between px-8 py-3 h-[50px] border">
+    <!-- left starts -->
+    <div class=" relative flex items-center w-[80%] gap-5">
+      <div class="w-[40px] h-[40px] rounded-full cursor-pointer hover:bg-[#252525] text-white flex justify-center items-center">
+        <span class="menu material-symbols-outlined">menu</span>
+
+        <!-- mobile side menu starts -->
+        <div class="absolute side-menu md:left-3 w-[300px] lg:h[100vh]  md:h-[100vh] z-1 lg:flex md:flex none justify-start flex-col p-3 ">
+          <div class="h-[40px] cursor-pointer text-white flex gap-5 justify-start items-center">
+            <span class="menu material-symbols-outlined hover:bg-gray-800 p-2 rounded-full">menu</span>
+            <img class="w-[80px]" src="images/Youtube-Logo-PNG.png" alt="" />
+          </div>
+          
+          <ul class="p-2 flex flex-col overflow-auto">
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">home</span>
+              <p class="text-[15px]">Home</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">play_arrow</span>
+              <p class="text-[15px]">Shorts</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">subscriptions</span>
+              <p class="text-[15px]">Subscription</p>
+            </li>
+            <hr class="m-2">
+            <li class="flex items-center gap-5">
+              <p class="text-[15px]">You ></p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">playlist_play</span>
+              <p class="text-[15px]">Playlists</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">auto_read_play</span>
+              <p class="text-[15px]">Your videos</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">history_2</span>
+              <p class="text-[15px]">Watch later</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">thumb_up</span>
+              <p class="text-[15px]">Liked videos</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">vertical_align_bottom</span>
+              <p class="text-[15px]">Downloads</p>
+            </li>
+
+            <hr>
+          
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">shopping_bag</span>
+              <p class="text-[15px]">Shopping</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">music_note</span>
+              <p class="text-[15px]">Music</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">movie_info</span>
+              <p class="text-[15px]">Films</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">live_tv</span>
+              <p class="text-[15px]">Live</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">sports_esports</span>
+              <p class="text-[15px]">Gaming</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">newspaper</span>
+              <p class="text-[15px]">News</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">trophy</span>
+              <p class="text-[15px]">Sports</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">school</span>
+              <p class="text-[15px]">Courses</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">styler</span>
+              <p class="text-[15px]">Fashion & beauty</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">podcasts</span>
+              <p class="text-[15px]">Podcast</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">blur_on</span>
+              <p class="text-[15px]">Playables</p>
+            </li>
+            <hr>
+            <li>
+              More on YouTube
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <img src="images/youtube1.svg.svg" alt="">
+              <p class="text-[15px]">Youtube premium</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <img src="images/youtube2.svg.svg" alt="">
+              <p class="text-[15px]">Youtube Studio</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <img src="images/youtube3.svg.svg" alt="">
+              <p class="text-[15px]">Youtube Music</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <img src="images/youtube4.svg.svg" alt="">
+              <p class="text-[15px]">Youtube Kids</p>
+            </li>
+            <hr>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">settings</span>
+              <p class="text-[15px]">Settings</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">flag</span>
+              <p class="text-[15px]">Report history</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">help</span>
+              <p class="text-[15px]">Help</p>
+            </li>
+            <li class="flex items-center gap-5 px-2 p-1.5 hover:bg-gray-800 rounded-lg">
+              <span class="material-symbols-outlined">feedback</span>
+              <p class="text-[15px]">Send feedback</p>
+            </li>
+          </ul>
         </div>
-        <div class="w-[120px] cursor-pointer flex">
-          <img class="" src="images/Youtube-Logo-PNG.png" alt="" />
-          <sup class="text-gray-400 mt-1.5"> IN </sup>
-        </div>
+        <!-- mobile side menu ends -->
       </div>
-      <!-- left ends -->
-      <!-- right starts -->
-      <div class="flex items-center h-[40px] w-[90%] gap-2">
-        <!-- input starts -->
-        <div
-          class="flex items-center cursor-pointer md:w-[100%] ml-[1rem] rounded-3xl h-9 border border-gray-400 bg-[#252525] overflow-hidden"
-        >
-          <input
-            class="h-[30px] rounded-bl-full cursor-pointer rounded-tl-full pl-3 text outline-0 w-[100%] bg-black placeholder-[#252525]"
-            type="text"
-            placeholder="Search"
-          />
-          <span
-            class="material-symbols-outlined cursor-pointer border-l-1 w-[3rem] text-white text-center"
-            >search</span
-          >
-        </div>
 
-        <!-- input closed -->
-        <div id="div" class="rounded-full">
-          <span class="material-symbols-outlined cursor-pointer"> mic </span>
-        </div>
 
-        <div
-          class="create flex md:hidden cursor-pointer items-center gap-1.5 rounded-3xl py-[5px] px-[10px] bg-[#252525]"
-        >
-          <span class="material-symbols-outlined text-white">add_2</span>
-          <span class="font-bold text-white">Create</span>
-        </div>
 
+
+
+
+      <div class="w-[80px] cursor-pointer flex">
+        <img class="" src="images/Youtube-Logo-PNG.png" alt="" />
+        <sup class="text-gray-400 mt-1.5"> IN </sup>
+      </div>
+    </div>
+    <!-- left ends -->
+    <!-- right starts -->
+    <div class="flex items-center h-[40px] w-[90%] gap-2">
+      <!-- input starts -->
+      <div
+        class="flex items-center cursor-pointer md:w-[100%] ml-[1rem] rounded-3xl h-9 border border-gray-400 bg-[#252525] overflow-hidden">
+        <input
+          class="h-[30px] pl-8 rounded-bl-full cursor-pointer rounded-tl-full text outline-0 w-[100%] bg-black placeholder-[#ffffff] text-white"
+          type="text" placeholder="Search" />
+        <span class="material-symbols-outlined cursor-pointer border-l-1 w-[3rem] text-white text-center">search</span>
+      </div>
+
+      <!-- input closed -->
+      <div id="div" class="rounded-full">
+        <span class="material-symbols-outlined cursor-pointer">mic</span>
+      </div>
+
+      <div class="create flex md:hidden cursor-pointer justify-center items-center gap-2 rounded-3xl bg-[#252525]">
+        <span class="material-symbols-outlined text-white">add_2</span>
+        <span class="font-bold p-5 text-white">Create</span>
+      </div>
+
+      <span class="material-symbols-outlined cursor-pointer text-white p-[5px]">notifications</span>
+
+      <!-- profile starts -->
+      <div class="reounded">
         <span
-          class="material-symbols-outlined cursor-pointer text-white p-[5px]"
-          >notifications</span
-        >
-
-        <!-- profile starts -->
-        <div class="reounded">
-          <span
-            class="material-symbols-outlined cursor-pointer bg-[#252525] text-3xl rounded-full text-white p-[5px]"
-            >account_circle</span
-          >
-        </div>
-        <!-- profile ended -->
+          class="material-symbols-outlined cursor-pointer bg-[#252525] text-3xl rounded-full text-white p-[5px] mr-8">account_circle</span>
       </div>
-      <!-- right ends -->
-    </nav>
-    <button id="leftBtn" onclick="leftBtn()" class=" rounded-full">
-      <span class="material-symbols-outlined text-white text-center"> chevron_left </span>
-    </button>
-    <section id="category-slider" class="flex gap-2 scrollbar-hide">
-      <div class="nav-category">
-        <p>All</p>
-        <p>Music</p>
-        <p>Web Development</p>
-        <p>Live</p>
-        <p>Mixes</p>
-        <p>Mantras</p>
-        <p>Java</p>
-        <p>AI</p>
-        <p>Gulshan Kumar</p>
-        <p>Album</p>
-        <p>Live Television</p>
-        <p>Folk Music</p>
-        <p>Sales</p>
-        <p>Information</p>
-        <p>Filmi</p>
-        <p>Comedy</p>
-        <p>Recently Uploaded</p>
-        <p>Watched</p>
-        <p>New to you</p>
+      <!-- profile ended -->
+    </div>
+    <!-- right ends -->
+  </nav>
+  <main>
+
+
+  <!-- <button id="leftBtn" id="leftBtn" class=" rounded-full">
+    <span class="material-symbols-outlined text-white text-center"> chevron_left </span>
+  </button> -->
+  <section id="body" class="flex gap-2 scrollbar-hide">
+    <div class="left-body">
+      <div>
+        <span class="material-symbols-outlined text-white">home</span>
+
+
       </div>
-    </section>
-    <button id="ritBtn" onclick="rightBtn()" class="rounded-full">
-      <span class="material-symbols-outlined text-white text-center"> chevron_right </span>
-    </button>
 
 
-    <script src="script.js"></script>
-  </body>
+    </div>
+
+    <div class="nav-category h-[28px]">
+      <p>All</p>
+      <p>Music</p>
+      <p>Web Development</p>
+      <p>Live</p>
+      <p>Mixes</p>
+      <p>Mantras</p>
+      <p>Java</p>
+      <p>AI</p>
+      <p>Gulshan Kumar</p>
+      <p>Album</p>
+      <p>Live Television</p>
+      <p>Folk Music</p>
+      <p>Sales</p>
+      <p>Information</p>
+      <p>Filmi</p>
+      <p>Comedy</p>
+      <p>Recently Uploaded</p>
+      <p>Watched</p>
+      <p>New to you</p>
+    </div>
+  </section>
+  <!-- <button id="ritBtn" id="rightBtn" class="rounded-full">
+    <span class="material-symbols-outlined text-white text-center"> chevron_right </span>
+  </button> -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
