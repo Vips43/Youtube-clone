@@ -6,3 +6,4 @@ menu.forEach((e)=>{
         sideMenu.classList.toggle('display')
     })
 })
+
