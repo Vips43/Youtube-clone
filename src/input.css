@@ -1,43 +1,16 @@
 @import "tailwindcss";
 
-<<<<<<< HEAD
-=======
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 100,
-  'GRAD' 0,
-  'opsz' 24
-}
-#div{
-  padding: 5px 6px 0 6px;
-  background-color: #252525;
-  span{
-    color:white;
-  }
-}
-#category-slider{
-  background-color: black;
-  overflow-x: auto;
-  position: relative;
-  height: 80px;
-  div{
-    border: 10px solid black;
-    position: absolute;
-    width:100%;
-    display: flex;
-    gap: 10px;
-  }
-}
-#category-slider > div > p{
-  background-color: #252525;
-  white-space: nowrap;
-  padding: 2px 10px;
-  border-radius: 5px;
-  color: white;
-  font-weight: 600;
-}
-#category-slider::-webkit-scrollbar{
-  display: none;
-}
->>>>>>> f5098bb8db1ad0b83143e650c321b6aa2d89eafd
+  
+
+    @layer utilities {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    }
