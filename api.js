@@ -47,8 +47,12 @@ export async function getData(q = 'vipul gehlot') {
     console.error(error);
   }
 }
+<<<<<<< HEAD
 // getData()
 window.getData = getData;
+=======
+ getData()
+>>>>>>> 0a85e0f0b831318a9001e64f94df790119500a5f
 
 /**=======================================
    get channel from search api
@@ -128,10 +132,17 @@ export async function getChannelDetails(chid) {
     console.error(error);
   }
 }
+<<<<<<< HEAD
 // getChannelDetails()
 export async function getChannelDetailsArray() {
   const channelID = `UCIhSu8oj-mLOZGFgsnXIAjg`
   let data = youtube.getChannelDetails;
+=======
+ getChannelDetails()
+async function getChannelDetailsArray() {
+    const channelID = `UCIhSu8oj-mLOZGFgsnXIAjg`
+    let data = youtube.getChannelDetails;
+>>>>>>> 0a85e0f0b831318a9001e64f94df790119500a5f
 
   console.log(data);
 
