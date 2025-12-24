@@ -23,19 +23,20 @@ async function channelUI() {
   channel_details.classList.add("hidden");
   tranding.classList.add("hidden");
 
-  vid_card.innerHTML = ``;
+  // vid_card.innerHTML = ``;
 
-  const data = await channel();
+  const datas = await channel();
   const data1 = await channelRelResult();
 
   /* =======================
      Channel Card
   ======================= */
-  if (data) {
-    const channelDiv = document.createElement('div');
-    channelDiv.dataset.ch_id = data.channelId;
-
-    channelDiv.innerHTML = `
+  if (datas) {
+    const fragment = document.createDocumentFragment();
+    datas.forEach(data => {
+      const channelDiv = document.createElement('div');
+      channelDiv.dataset.ch_id = data.channelId;
+      channelDiv.innerHTML = `
     <div class="bg-neutral-900 p-1 w-full rounded-lg grid grid-cols-[1.3fr_2fr] gap-3 hover:bg-neutral-700/50 cursor-pointer">
       <div class="bg-neutral-700/20 h-40 rounded flex items-center justify-center">
         <img src="${data.img}" class="aspect-square h-40 rounded-full" />
@@ -55,11 +56,13 @@ async function channelUI() {
       </div>
     </div>
   `;
-    channelDiv.addEventListener("click", () => {
-      console.log("channel id:", data.channelId);
-      // getChannelDetailsArrayUI();
-    });
-    vid_card.append(channelDiv);
+      fragment.append(channelDiv)
+    })
+    // channelDiv.addEventListener("click", () => {
+    //   console.log("channel id:", data.channelId);
+    //   // getChannelDetailsArrayUI();
+    // });
+    vid_card.append(fragment);
   }
   /* =======================
      Related Videos
@@ -93,7 +96,7 @@ async function channelUI() {
       </div>
 
       <div class="flex flex-col gap-1 flex-1 min-w-0">
-        <h3 class="text-base font-semibold line-clamp-2">${d.title}</h3>
+        <h3 class="text-base font-semibold line-clamp-2">${d.vTitle}</h3>
 
         <div class="text-sm text-neutral-400 flex gap-2">
           <span>${d.views} views</span><span>•</span>
@@ -101,8 +104,8 @@ async function channelUI() {
         </div>
 
         <div class="flex items-center gap-2 mt-1">
-          <img src="${data.img}" class="w-6 h-6 rounded-full" />
-          <span class="text-sm text-neutral-300">${data.title}</span>
+          <img src="${d.avatar}" class="w-6 h-6 rounded-full" />
+          <span class="text-sm text-neutral-300">${d.authTitle}</span>
         </div>
 
         <p class="text-sm text-neutral-400 line-clamp-2 mt-1">
@@ -114,12 +117,11 @@ async function channelUI() {
     div.addEventListener("click", () => vidCard(div));
     fragment.append(div);
   });
-
   vid_card.append(fragment);
-
   observerImages();
 }
-window.channelUI=channelUI
+channelUI()
+window.channelUI = channelUI
 
 
 async function getChannelDetailsArrayUI() {
