@@ -1,16 +1,5 @@
 @import "tailwindcss";
 
-  
-
-    @layer utilities {
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-        display: none;
-      }
-
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
-      }
-    }
+.isLive{
+  @apply before:content-['LIVE'] before:absolute before:inset-x-1/2 before:-translate-x-1/2 before:-bottom-1 before:w-fit before:px-2 before:text-xs before:rounded-sm before:py-0.5 before:bg-red-500  
+}

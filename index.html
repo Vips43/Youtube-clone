@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+  <!-- javascript -->
+
+
   <!-- Tailwind Output -->
   <link rel="stylesheet" href="src/output.css">
 
@@ -13,11 +17,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100;200;300;400;500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 
   <title>YouTube Clone</title>
 </head>
 
-<body class="bg-black text-white *:transition-all">
+<body class="relative bg-black text-white *:transition-all">
 
   <!-- NAVBAR -->
   <nav
@@ -43,8 +48,8 @@
 
       <!-- Search -->
       <div class="flex items-center w-full bg-neutral-900 border border-neutral-700 rounded-full overflow-hidden h-10">
-        <input class="bg-neutral-900 w-full px-4 outline-none" type="text" placeholder="Search" />
-        <span class="material-symbols-outlined px-4 border-l border-neutral-700 text-white cursor-pointer">search</span>
+        <input id="input" class="bg-neutral-900 w-full px-4 outline-none" type="text" placeholder="Search" />
+        <button id="searchBtn"><span class="material-symbols-outlined px-4 border-l border-neutral-700 text-white cursor-pointer">search</span></button>
       </div>
 
       <button class="hidden md:flex items-center justify-center bg-neutral-900 p-2 rounded-full">
@@ -91,23 +96,119 @@
       </ul>
     </aside>
 
+    <!-- open videos -->
+    <main id="channel_details" class="w-full px-8 py-1 hidden">
+
+      <!-- <div class="">
+        <div class="">
+          <div class="">
+            <img src="/images/Img2.jpg" alt="">
+          </div>
+          
+            <div class="flex gap-5 pt-5 pb-3">
+              <div class="h-32 w-32 shrink-0 p-0.5 bg-red-600 rounded-full relative isLive">
+                <img src="images/Col1.jpeg" class="w-full rounded-full " alt="">
+              </div>
+              <div class="w-full flex flex-col justify-between">
+                <div class="flex items-end gap-2 h-full pb-2.5">
+                  <h1 class="text-5xl font-semibold">WWE </h1>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white"
+                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-badge-check-icon lucide-badge-check">
+                    <path
+                      d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
+                </div>
+                <div class="h-full flex flex-col justify-around">
+                  <p class="text-sm text-neutral-500 space-x-0.5"><span class="font-semibold text-white">@WWE
+                    </span><span>•</span>
+                    <span>11.2 crore subscribers </span><span>•</span>
+                    <span>89K videos</span>
+                  </p>
+                  <p class="text-sm text-neutral-500">WWE on yotube is your description.....</p>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <p class="text-sm"><a class="text-blue-400" href="wwe.com/wheretowatch">wwe.com/wheretowatch</a> <span class="font-semibold">and 7 more links</span></p>
+          </div>
+        </div>
+      </div> -->
+
+    </main>
+    <!-- <div class="absolute top-0 left-0 w-full h-screen flex items-center justify-center bg-black/50">
+      <div class="max-w-lg bg-neutral-800 p-5 rounded-xl">
+        <div class="flex justify-between mb-5">
+          <h2 class="text-xl font-bold">WWE</h2>
+          <i class="fa-solid fa-x"></i>
+        </div>
+        <div class="max-h-[calc(100vh-20rem)] overflow-y-auto custom-scrollbar">
+          <div>
+            <h4 class="text-lg font-bold">Description</h4>
+            <p class="text-sm mr-8">Lorem ipsum dolor sit, amet consectetur adipisicing eam expedita itaque!
+            </p>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold my-2">Links</h4>
+            <ul>
+              <li class="flex items-center gap-3">
+                <img src="/images/Col1.jpeg" alt="" class="h-8 w-8" >
+                <div>
+                  <h5 class="font-semibold">Where to watch WWE</h5>
+                  <a class="text-blue-400" href="">Link</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>More info</h4>
+            <ul>
+              <li>
+                <i class="fa-solid fa-globe"></i>
+                <span>www.youtube.com/@WWE</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-digital-ocean"></i>
+                <span>join date</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-users"></i>
+                <span>subscribers</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-youtube"></i>
+                <span>total videos</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-chart-line"></i>
+                <span>views</span>
+              </li>
+            </ul>
+            <button><i class="fa-solid fa-share"></i> Share channel</button>
+            <button><i class="fa-regular fa-flag"></i> Report user</button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
     <!-- CONTENT -->
-    <section class="w-full p-4">
+    <section id="content_section" class="w-full p-4 ">
 
       <!-- category -->
-      <div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+      <div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide hidden">
         <p class="bg-neutral-800 px-4 py-1 rounded-full whitespace-nowrap">All</p>
         <p class="bg-neutral-800 px-4 py-1 rounded-full whitespace-nowrap">Music</p>
         <p class="bg-neutral-800 px-4 py-1 rounded-full whitespace-nowrap">Web Development</p>
         <p class="bg-neutral-800 px-4 py-1 rounded-full whitespace-nowrap">AI</p>
       </div>
 
-      <!-- open videos -->
-      <main class="">
-        <div>
 
-        </div>
-      </main>
+      <!-- tranding UI -->
+      <div id="tranding" class="">
+
+      </div>
 
       <!-- VIDEOS GRID -->
       <div id="vid_card" class="grid grid-cols-1 gap-2 mt-4">
@@ -135,8 +236,7 @@
   </main>
 
   <script type="module" src="script.js"></script>
-  <script src="obeserver.js"></script>
-   <script src="work.js"></script>
+  <script src="work.js"></script>
 </body>
 
 </html>

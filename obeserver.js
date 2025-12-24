@@ -8,7 +8,7 @@ const observer = new IntersectionObserver((entries, observer) => {
         }
     })
 }, {})
-function observerImages() {
+export function observerImages() {
     let img = document.querySelectorAll("img")
     img.forEach(i => {
         observer.observe(i)
