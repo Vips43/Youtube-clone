@@ -25,7 +25,7 @@ async function getData() {
         console.error(error);
     }
 }
-// getData()
+ getData()
 
 /**=======================================
     get channel from search api
