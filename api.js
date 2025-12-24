@@ -93,7 +93,7 @@ export async function getChannelDetails(chid) {
         console.error(error);
     }
 }
-// getChannelDetails()
+ getChannelDetails()
 async function getChannelDetailsArray() {
     const channelID = `UCIhSu8oj-mLOZGFgsnXIAjg`
     let data = youtube.getChannelDetails;
